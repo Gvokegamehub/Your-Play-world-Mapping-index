@@ -2,6 +2,7 @@
 
 import "./insideBoat.ts";
 import "./insideCapApartment.ts";
+import "./secretWay.js";
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
