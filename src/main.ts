@@ -3,6 +3,7 @@
 import "./insideBoat.ts";
 import "./insideCapApartment.ts";
 import "./secretWay.js";
+import "./secretSentence.js";
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
