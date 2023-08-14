@@ -1,5 +1,8 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
+import "./insideBoat.ts";
+import "./insideCapApartment.ts";
+
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 console.log('Script started successfully');
