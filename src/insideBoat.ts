@@ -56,3 +56,5 @@ WA.onInit().then(() => {
         WA.room.showLayer("Lights")
     })
 });
+
+export {};
