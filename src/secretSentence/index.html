@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Indices</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./css.css">
+    </head>
+    <body>
+        <h1>Félicitation, tu viens de trouver un indice 🎉</h1>
+        <p>Voici le code : <span id="code" style="font-weight: bold;"></span></p>
+        <p style="font-size: 30px;">
+            <span id="word1">---</span>
+            <span id="word2">--------</span>
+            <span id="word3">----</span>
+            <span id="word4">----</span>
+            <span id="word5">--</span>
+            <span id="word6">-----</span>
+        </p>
+
+        <!-- show badge with picture associated -->
+        <div class="badges" style="display:flex;flex-direction: row;justify-content: center;align-items: center;">
+            <img id="badgeword1" src="./images/word1.png" alt="badge word 1" style="display: none;">
+            <img id="badgeword2" src="./images/word2.png" alt="badge word 2" style="display: none;">
+            <img id="badgeword3" src="./images/word3.png" alt="badge word 3" style="display: none;">
+            <img id="badgeword4" src="./images/word4.png" alt="badge word 4" style="display: none;">
+            <img id="badgeword5" src="./images/word5.png" alt="badge word 5" style="display: none;">
+            <img id="badgeword6" src="./images/word6.png" alt="badge word 6" style="display: none;">
+        </div>
+
+
+
+        <script type="text/javascript">
+            const sentence = {
+                word1: 'NFT',
+                word2: 'Biarritz',
+                word3: '2023',
+                word4: 'c\'est',
+                word5: 'la',
+                word6: 'folie',
+            }
+            const url = new URL(window.location.toString());
+            const wordsFound = url.searchParams.get("words");
+            // show words find by user
+            for(const word of Object.keys(sentence)){
+                if(wordsFound.indexOf(word) != -1){
+                    document.getElementById(word).innerHTML = sentence[word];
+                    document.getElementById(`badge${word}`).style.display = "block";
+                }
+            }
+
+            // show the last word find by user
+            const currentWordFound = url.searchParams.get("current");
+            document.getElementById("code").innerHTML = sentence[currentWordFound];
+        </script>        
+    </body>
+</html>
