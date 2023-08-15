@@ -53,7 +53,7 @@ WA.onInit().then(() => {
             });
             WA.ui.modal.openModal({
                 title: "Félicitation, vous avez trouvé un objet 🎉",
-                src: `${url.protocol}//${url.host}${url.protocol === 'https:' ? "/nftbiarritz-game/" : '/'}src/secretSentence/index.html?current=${word}&words=${wordsFound.join(",")}`,
+                src: `${url.protocol}//${url.host}${url.protocol === 'https:' ? "/nftbiarritz-game/" : '/'}secretSentence/index.html?current=${word}&words=${wordsFound.join(",")}`,
                 allowApi: true,
                 allow: "microphone; camera",
                 position: "center",
