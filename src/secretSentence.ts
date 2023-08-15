@@ -79,7 +79,7 @@ WA.onInit().then(() => {
             (WA.player.state.sentance as Sentance).word6
         ){
             stopIndiceEverySecond();
-            formPopup = WA.ui.openPopup("formPopup", "Bravo tu as trouvé la pharse secret 🎉🎉", [
+            formPopup = WA.ui.openPopup("formPopup", "Bravo tu as trouvé la phrase secrète 🎉🎉", [
                 {
                     label: "Get your NFT",
                     className: "primary",
