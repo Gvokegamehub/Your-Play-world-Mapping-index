@@ -50,7 +50,7 @@
             const wordsFound = url.searchParams.get("words");
             // show words find by user
             for(const word of Object.keys(sentence)){
-                if(wordsFound.indexOf(word) != -1 && word != url.searchParams.get("current")){
+                if(wordsFound.indexOf(word) != -1){
                     document.getElementById(word).innerHTML = sentence[word];
                     document.getElementById(`badge${word}`).style.display = "block";
                 }
