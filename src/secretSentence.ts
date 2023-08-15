@@ -59,13 +59,11 @@ WA.onInit().then(() => {
                 position: "center",
             }, () => {
                 getIndiceEverySecond();
-                WA.controls.restorePlayerControls();
                 WA.ui.modal.closeModal();
             });
             lastIndice = "noindice";
             stopIndiceEverySecond();
             WA.ui.banner.closeBanner();
-            WA.controls.disablePlayerControls();
         });
     }
 
