@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "build": "tsc && vite build && mkdir -p ./dist/src/secretSentence/ && cp -r ./src/secretSentence/* ./dist/src/secretSentence/",
+    "build": "tsc && vite build",
     "prod": "vite preview"
   },
   "devDependencies": {
