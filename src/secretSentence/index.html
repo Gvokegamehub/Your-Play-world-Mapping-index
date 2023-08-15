@@ -7,6 +7,15 @@
     <body>
         <h1>Félicitation, tu viens de trouver un indice 🎉</h1>
         <p>Voici le code : <span id="code" style="font-weight: bold;"></span></p>
+        <!-- show badge with picture associated -->
+        <div class="badges" style="display:flex;flex-direction: row;justify-content: center;align-items: center;">
+            <img id="badgefoundword1" src="./images/word1.png" alt="badge word 1" style="display: none; width: 60px;">
+            <img id="badgefoundword2" src="./images/word2.png" alt="badge word 2" style="display: none; width: 60px;">
+            <img id="badgefoundword3" src="./images/word3.png" alt="badge word 3" style="display: none; width: 60px;">
+            <img id="badgefoundword4" src="./images/word4.png" alt="badge word 4" style="display: none; width: 60px;">
+            <img id="badgefoundword5" src="./images/word5.png" alt="badge word 5" style="display: none; width: 60px;">
+            <img id="badgefoundword6" src="./images/word6.png" alt="badge word 6" style="display: none; width: 60px;">
+        </div>
         <p style="font-size: 30px;">
             <span id="word1">---</span>
             <span id="word2">--------</span>
@@ -41,7 +50,7 @@
             const wordsFound = url.searchParams.get("words");
             // show words find by user
             for(const word of Object.keys(sentence)){
-                if(wordsFound.indexOf(word) != -1){
+                if(wordsFound.indexOf(word) != -1 && word != url.searchParams.get("current")){
                     document.getElementById(word).innerHTML = sentence[word];
                     document.getElementById(`badge${word}`).style.display = "block";
                 }
@@ -50,6 +59,7 @@
             // show the last word find by user
             const currentWordFound = url.searchParams.get("current");
             document.getElementById("code").innerHTML = sentence[currentWordFound];
+            document.getElementById(`badgefound${currentWordFound}`).style.display = "block";
         </script>        
     </body>
 </html>
